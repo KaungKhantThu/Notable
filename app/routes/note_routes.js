@@ -44,7 +44,7 @@ module.exports=function(app,client){
 		//we will create the note here
 		//console.log(req.body);
 		//res.send('Hello');
-		const note={text:req.body.body,arr:req.body.array,obj:req.body.object,title:req.body.title};
+		const note={text:req.body.body,arr:req.body.array,title:req.body.title,content:req.body.content,desc:req.body.desc};
 		db.collection('notes').insert(note,(err,result)=>{
 			if(err){
 				res.send({'error':'An error has occured'});
